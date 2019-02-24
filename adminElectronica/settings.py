@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_tables2',
+    'django_filters',
+    'widget_tweaks',
+    'bootstrap3','bootstrap3-iconfield',
     'infoHistorial'
 ]
 
