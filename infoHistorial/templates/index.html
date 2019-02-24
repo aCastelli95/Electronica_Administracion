@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+    <head>
+        <title>Electronica Fabian</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/infoHistorial/">{{reporte}}</a></h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% for post in reporte %}
+                    <div class="post">
+                        <div class="date">
+                            {{ post.titulo}}
+                        </div>
+                        <h1><a href="">{{ post.fecha }}</a></h1>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
