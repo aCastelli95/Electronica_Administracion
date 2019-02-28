@@ -1,7 +1,7 @@
 from .models import Reporte 
 from .tables import ReporteTable
 from .filter import ReporteFilter
-
+from .forms import ReporteForm
 from django.urls import reverse_lazy
 
 #VISTAS BASADAS EN CLASES
@@ -20,13 +20,14 @@ class InfoIndex(SingleTableMixin, FilterView):
 class ReporteCreation(CreateView):
     model = Reporte
     success_url = reverse_lazy('index')
-    fields = ['titulo', 'fecha']
     template_name = 'formulario.html'
+    form_class = ReporteForm
 
 class ReporteUpdate(UpdateView):
     model = Reporte
-    success_url = reverse_lazy('infoHistorial:index')
+    success_url = reverse_lazy('index')
     fields = ['titulo', 'fecha']
+    template_name = 'formulario.html'
 
 
 class ReporteDelete(DeleteView):
