@@ -43,5 +43,6 @@ class ReporteUpdate(UpdateView):
 
 class ReporteDelete(DeleteView):
     model = Reporte
-    success_url = reverse_lazy('infoHistorial:index')
+    template_name = 'formulario_borrado.html'
+    success_url = reverse_lazy('index')
 

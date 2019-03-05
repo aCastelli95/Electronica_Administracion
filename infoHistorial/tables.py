@@ -6,7 +6,7 @@ from django.utils.safestring import mark_safe
 class ReporteTable(tables.Table):
     Editar = tables.LinkColumn('edit', text=mark_safe(
     '<i class="fas fa-edit"></i>'), args=[A('pk')], orderable=False)
-    Borrar = tables.LinkColumn('edit', text=mark_safe(
+    Borrar = tables.LinkColumn('delete', text=mark_safe(
     '<i class="fas fa-trash"></i>'), args=[A('pk')], orderable=False)
     class Meta:
         model = Reporte
