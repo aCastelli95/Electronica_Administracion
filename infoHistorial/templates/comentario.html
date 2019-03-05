@@ -1,14 +1,17 @@
 {% load staticfiles %}
 <div class="container">
+
 {% for obj in comentarios %}   
     <div class="card mb-3 border-dark">
         <div class="card-body">
             <h5 class="card-title">{{obj.titulo}}</h5>
             <p class="card-text">{{obj.texto}}</p>   
             <p class="card-text"><small class="text-muted">{{obj.fecha}}</small></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="{% url 'edit_comentario' pk=obj.id %}" class="btn btn-primary">Editar</a>
+            <a href="{% url 'delete_comentario' pk=obj.id %}" class="btn btn-danger">Eliminar</a>
         </div>
-        <img class="card-img-bottom"  width="200" height="200" src="{% static '/infinito.png' %}" alt="Card image cap">
+        <img class="card-img-bottom"  width="200" height="200" src="http://localhost:8000/media/{{obj.imagen}}" alt="Card image cap">
     </div>
-  {% endfor %} 
+{% endfor %} 
+
 </div> 

@@ -1,0 +1,21 @@
+{% extends 'index.html'%}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="card text-center">   
+        <div class="card-header">
+            Cartel de advertencia
+        </div>
+            <div class="card-body">
+                <h5 class="card-title">{{object.titulo}}</h5>
+                
+                <p class="card-text">¿Desea eliminar el reporte {{object.titulo}}</p>
+                <p>Los archivos asociados (PDF e Imagenes) añadidos al reporte quedaran en la base de datos</p>
+                
+                <button class="btn btn-danger" type="submit"> Si, eliminar </button>
+                <a href="{% url 'index'%}"> Cancelar </a>
+            </div>
+    </div>            
+</form>
+{% endblock %}
