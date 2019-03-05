@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<div class="container">
+{% for obj in comentarios %}   
+    <div class="card mb-3 border-dark">
+        <div class="card-body">
+            <h5 class="card-title">{{obj.titulo}}</h5>
+            <p class="card-text">{{obj.texto}}</p>   
+            <p class="card-text"><small class="text-muted">{{obj.fecha}}</small></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <img class="card-img-bottom"  width="200" height="200" src="{% static '/infinito.png' %}" alt="Card image cap">
+    </div>
+  {% endfor %} 
+</div> 

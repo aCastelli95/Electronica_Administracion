@@ -4,9 +4,11 @@ from django.utils import timezone
 
 # Create your models here.
 class Reporte(models.Model):
-    titulo = models.CharField(null=False, max_length=20)
+    titulo = models.CharField(null=False, blank=False ,unique=True, max_length=20)
     fecha = models.DateTimeField(blank=True, null=True, default=timezone.now)
-    
+    archivo = models.FileField(null=True, upload_to='archivos/')
+    imagen = models.ImageField(null= True,upload_to='imagenes/') 
+
     def __str__(self):
         return self.titulo
     def __unique__(self):

@@ -8,6 +8,8 @@ class ReporteForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'titulo':'Titulo',
-            'fecha':'Fecha',
+            'fecha':'Fecha', 
+            'archivo':'Archivo',
+            'imagen':'Imagen',
         }
        
