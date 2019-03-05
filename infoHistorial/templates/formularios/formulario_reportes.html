@@ -1,5 +1,6 @@
 {% load crispy_forms_tags %}
 {% load staticfiles %}
+
 <div class="container">
         <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
@@ -7,22 +8,56 @@
                 <div class="col-6">
                     {{ form.titulo|as_crispy_field}}
                 </div>       
+                <div class="col-6">
+                    {{ form.fecha|as_crispy_field}}
+                </div> 
             </div>
             <div class="row">
                 <div class="col-6">
-                    {{ form.fecha|as_crispy_field}}
-                </div>       
-            </div>   
+                    {{ form.modelo|as_crispy_field}}
+                </div>
+                <div class="col-6">
+                    {{ form.chasis|as_crispy_field}}
+                </div>  
+            </div>
             <div class="row">
                 <div class="col-6">
-                    {{ form.archivo|as_crispy_field}}
-                </div>       
+                    {{ form.modelo_equivalente|as_crispy_field}}
+                </div>           
+                <div class="col-6">
+                    {{ form.firmware|as_crispy_field}}
+                </div>    
+            </div>       
+            <div class="row">
+                <div class="col-6">
+                    {{ form.control_remoto|as_crispy_field}}
+                </div>
+                <div class="col-6">
+                    {{ form.display|as_crispy_field}}
+                </div>  
             </div>    
             <div class="row">
                 <div class="col-6">
+                    {{ form.main|as_crispy_field}}
+                </div>
+                <div class="col-6">
+                    {{ form.fuente|as_crispy_field}}
+                </div>  
+            </div>    
+            <div class="row">
+                <div class="col-6">
+                    {{ form.modo_servicio|as_crispy_field}}
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col-6">
+                    {{ form.archivo|as_crispy_field}}
+                </div>  
+                <div class="col-6">
                     {{ form.imagen|as_crispy_field}}
-                </div>       
+                </div> 
             </div>
+             
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Actualizar</button>
         </form>
     </div>

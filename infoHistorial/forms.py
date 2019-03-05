@@ -22,8 +22,6 @@ class ComentarioForm(forms.ModelForm):
             'autor': forms.Select(
                 attrs={'class':'js-example-theme-single form-control',
                         'title':'Autor',
-                        }),
-                           
+                        }),             
         }
-        
        
